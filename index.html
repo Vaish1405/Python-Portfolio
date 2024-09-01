@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Sen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                    <img src="VSLogoPink.png">
+                </div>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#story">My Story</a></li>
+                    </ul>
+                    <ul class="contact-icons">
+                        <li class="nav-item"><a class="nav-link" href="#"><img src="github.png" alt="Github"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><img src="linkedin.png" alt="Linkedin"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <div class="container mx-15">
+        <div class="row align-items-center">
+            <img class="headshot img-fluid my-10" src="headshot.png" alt="Headshot Pciture">
+            <div class="col-md-8">
+                <div class="intro">
+                    <p class="lev1">Hi, I'm <span class="name">Vaishnavi</span></p>
+                    <p class="lev2"><span id="dynamic-text-container"><span id="dynamic-text"></span></span></p>
+                    <p class="lev3">An international student from India pursuing my undergraduation in
+                        Computer Science at California State University, Northridge. I am interested in 
+                        Web Development, Artificila Interlligence, Machine Learning and Software Development. 
+                    </p>
+                    <!--Add buttons for contact and resume-->
+                    <div class="intro-buttons">
+                        <a href="#">Contact Me</a>
+                        <a href="#">Resume</a>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const texts = ["UI/UX Designer", "Web Developer", "Software Developer", "Python Developer",
+                    "Java Developer", "JavaScript Developer"
+                    ]; 
+        let currentIndex = 0;
+        const textElement = document.getElementById('dynamic-text');
+        const typingSpeed = 90; // higher number makes it slower
+        const erasingSpeed = 50; // higher number makes it slower
+        const delay = 500; 
+
+        function typeText() {
+            const text = texts[currentIndex];
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < text.length) {
+                    textElement.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(eraseText, delay);
+                }
+            }
+
+            function eraseText() {
+                if (charIndex > 0) {
+                    textElement.textContent = text.slice(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(eraseText, erasingSpeed);
+                } else {
+                    currentIndex = (currentIndex + 1) % texts.length;
+                    setTimeout(typeText, delay);
+                }
+            }
+            type();
+        }
+        document.addEventListener('DOMContentLoaded', typeText);
+    </script>
+</body>
+</body>
+</html>
