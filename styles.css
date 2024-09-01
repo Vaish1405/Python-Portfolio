@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #000814;
 }
 
@@ -67,7 +67,7 @@ nav {
 }
 .intro p{
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 5%;
 }
 .lev1 {
     font-size: 45px;
@@ -109,9 +109,10 @@ nav {
 }
 
 .intro-buttons {
-    margin-left: 30%;
     margin-top: 3%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10%;
 }
 .intro-buttons a{
@@ -126,4 +127,21 @@ nav {
     background-color: #3A86FF;
     color: white;
 }
-  
+
+.line-break {
+    background-color: #AA4AF2;
+    margin: 20px auto; 
+    height: 2px;
+    width: 10%;
+
+}
+.experience {
+    text-align: center;
+    margin-top: 5%;
+    background-color: #06071B
+}
+
+.experience .heading {
+    font-size: 30px;
+    color: white;
+}
