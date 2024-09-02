@@ -56,9 +56,9 @@
         <hr class="line-break">
         <h2 class="heading">My Work Experience</h2>
         <div class="timeline">
-            <div class="experience-card left">
+            <div class="experience-card left animate-on-scroll">
                 <img src="csun-job-logo.png" alt="">
-                <div class="text-box animate-on-scroll" id="section-to-animate">
+                <div class="text-box" id="section-to-animate">
                     <h3>Web Developer</h3>
                     <h4>CSUN IT<small>2023 - Present</small></h4>     
                     <ul>
@@ -74,9 +74,9 @@
                     <span class="left-arrow"></span>
                 </div>
             </div>
-            <div class="experience-card right">
+            <div class="experience-card right animate-on-scroll">
                 <img src="techmetrica-job-logo.png" alt="">
-                <div class="text-box animate-on-scroll" id="section-to-animate">
+                <div class="text-box" id="section-to-animate">
                     <h3>Front-End Developer</h3>
                     <h4>Techmetrica Org.<small>2023 - 2024</small></h4>
                     <ul>
@@ -91,9 +91,9 @@
                     <span class="right-arrow"></span>
                 </div>
             </div>
-            <div class="experience-card left">
+            <div class="experience-card left animate-on-scroll">
                 <img src="csun-job-logo.png" alt="">
-                <div class="text-box animate-on-scroll" id="section-to-animate">
+                <div class="text-box " id="section-to-animate">
                     <h3>Student Supervisor</h3>
                     <h4>CSUN Library<small>2022 - 2024</small></h4>
                     <ul>
@@ -221,7 +221,7 @@
         }
 
         function handleScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
+            const elements = document.querySelectorAll('.experience-card');
             elements.forEach(el => {
                 if (isElementInViewport(el)) {
                     el.classList.add('visible');

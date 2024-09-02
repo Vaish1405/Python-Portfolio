@@ -158,15 +158,14 @@ nav {
     width: 50%;
 }
 
-.animate-on-scroll {
-    opacity: 0;
+.experience-card {
     transition: opacity 1s ease-in-out;
 }
-.left .animate-on-scroll.visible {
+.experience-card.visible.left .text-box{
     opacity: 1;
     animation: moveright 1s linear forwards;
 }
-.right .animate-on-scroll.visible {
+.experience-card.visible.right .text-box {
     opacity: 1;
     animation: moveleft 1s linear forwards;
 }
@@ -177,49 +176,26 @@ nav {
     position: relative;
     /* font-size: 15px; */
     border-radius: 6px;
-}
-
-/* .left .text-box {
-    animation: moveright 1s linear forwards;
     opacity: 0;
 }
-
-.right .text-box {
-    animation: moveleft 1s linear forwards;
-    opacity: 0;
-} */
 
 @keyframes moveright {
     0% {
-        opacity: 1;
         transform: translateX(-30px);
     }
     100%{
-        opacity: 1;
         transform: translateX(0px);
     }
 }
 
 @keyframes moveleft {
     0% {
-        opacity: 1;
         transform: translateX(30px);
     }
     100%{
-        opacity: 1;
         transform: translateX(0px);
     }
 }
-/* 
-.experience-card:nth-child(1) .text-box{
-    animation-delay: 0s;
-}
-.experience-card:nth-child(2) .text-box{
-    animation-delay: 1s;
-}
-.experience-card:nth-child(3) .text-box{
-    animation-delay: 2s;
-} */
 
 .left {
     left: 0;
@@ -234,6 +210,23 @@ nav {
     right: -20px;
     top: 32px;
     z-index: 10;
+    opacity: 0;
+}
+.experience-card.visible img {
+    opacity: 1;
+    animation: bubble 1s ease-in-out;
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .right img {
