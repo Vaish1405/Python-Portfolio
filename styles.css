@@ -344,6 +344,10 @@ nav {
     position: relative;
 }
 
+.project:hover {
+    transform: scale(1.05);
+}
+
 .project h3 {
     color: #3A86FF;
     font-weight: 600;
