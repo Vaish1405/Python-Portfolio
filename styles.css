@@ -153,7 +153,6 @@ nav {
     position: relative;
     width: 50%;
 }
-
 .experience-card {
     transition: opacity 0.5s ease-in-out;
 }
@@ -343,8 +342,22 @@ nav {
     /* box-shadow: 0 2px 5px #00E3BC; */
     border: 2px solid #00E3BC;
     position: relative;
+    opacity: 0;
 }
 
+.project-card.visible .project {
+    opacity: 1;
+    animation: movein 0.5s ease-in-out;
+}
+
+@keyframes movein {
+    0% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
 .project:hover {
     transform: scale(1.05);
 }

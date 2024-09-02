@@ -126,7 +126,7 @@
         <hr class="line-break">
         <h2 class="heading">My Projects</h2>
         <div class="projects-container row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="project-card animate-on-scroll col-lg-4 col-md-6 col-sm-12">
                 <div class="project">
                     <img src="project-img.png" alt="Project 1 Screenshot" class="project-image">
                     <h3>LA Hotels</h3>
@@ -142,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="project-card animate-on-scroll col-lg-4 col-md-6 col-sm-12">
                 <div class="project">
                     <img src="project-img.png" alt="Project 1 Screenshot" class="project-image">
                     <h3>Int. Conversion</h3>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="project-card animate-on-scroll col-lg-4 col-md-6 col-sm-12">
                 <div class="project">
                     <img src="project-img.png" alt="Project 1 Screenshot" class="project-image">
                     <h3>cow-cow-cow</h3>
@@ -230,7 +230,7 @@
         }
 
         function handleScroll() {
-            const elements = document.querySelectorAll('.experience-card');
+            const elements = document.querySelectorAll('.animate-on-scroll');
             elements.forEach(el => {
                 if (isElementInViewport(el)) {
                     el.classList.add('visible');
