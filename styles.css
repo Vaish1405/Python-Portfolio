@@ -53,12 +53,8 @@ nav {
     width: auto;
 }
 
-.contact-icons a {
-    display: block;
-}
-
-.contact-icons a:hover img {
-    opacity: 0.8;
+.nav-link:hover img{
+    opacity: 0.4;
 }
 
 .intro {
@@ -135,8 +131,8 @@ nav {
     width: 20%;
 }
 .experience {
-    margin-top: 8%;
-    padding-bottom: 8%;
+    margin-top: 50px;
+    padding-bottom: 50px;
     background-color: #06071b;
 }
 
@@ -159,15 +155,15 @@ nav {
 }
 
 .experience-card {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 .experience-card.visible.left .text-box{
     opacity: 1;
-    animation: moveright 1s linear forwards;
+    animation: moveright 0.5s linear forwards;
 }
 .experience-card.visible.right .text-box {
     opacity: 1;
-    animation: moveleft 1s linear forwards;
+    animation: moveleft 0.5s linear forwards;
 }
 .text-box {
     padding: 20px 30px;
@@ -214,7 +210,7 @@ nav {
 }
 .experience-card.visible img {
     opacity: 1;
-    animation: bubble 1s ease-in-out;
+    animation: bubble 0.5s ease-in-out;
 }
 
 @keyframes bubble {
@@ -222,7 +218,7 @@ nav {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(2);
     }
     100% {
         transform: scale(1);
@@ -242,7 +238,7 @@ nav {
     left: 50%;
     margin-left: -3px;
     z-index: 0;
-    animation: moveline 4s linear forwards;
+    animation: moveline 2s linear forwards;
 }
 
 @keyframes moveline {

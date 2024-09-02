@@ -23,8 +23,17 @@
                         <li class="nav-item"><a class="nav-link" href="#story">My Story</a></li>
                     </ul>
                     <ul class="contact-icons">
-                        <li class="nav-item"><a class="nav-link" href="https://github.com/Vaish1405" target="_blank"><img src="github.png" alt="Github"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/vaishnavi-sen-405a7a1bb/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a></li>
+                        <li class="nav-item">
+                            <a class="nav-link default1" href="https://github.com/Vaish1405" target="_blank">
+                                <img src="github.png" alt="Github">
+                            </a>
+                        </li>
+                        <li>
+                        <li class="nav-item">
+                            <a class="nav-link default2" href="https://www.linkedin.com/in/vaishnavi-sen-405a7a1bb/" target="_blank">
+                                <img src="linkedin.png" alt="Linkedin">
+                            </a>
+                        </li>
                         <!-- <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/_vaishnavi_sen_/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li> -->
                     </ul>
                 </nav>
@@ -156,7 +165,7 @@
                     <p>
                         Developed a game for people with hearing difficulties. The game uses audio cues to find the hidden target.
                         Difficulties and obstacles increase with the level
-                    </p><br>
+                    </p>
                     <small class="project-tech">Python, Flask, HTML/CSS, JavaScript</small><br>
                     <div class="text-center">
                         <a href="https://github.com/Vaish1405/380Project" class="github-button" target="_blank">
@@ -230,7 +239,9 @@
         }
 
     window.addEventListener('scroll', handleScroll);
-    // Trigger a scroll event to check initial state
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
     handleScroll();
     </script>
 </body>
