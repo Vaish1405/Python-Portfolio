@@ -158,6 +158,18 @@ nav {
     width: 50%;
 }
 
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.left .animate-on-scroll.visible {
+    opacity: 1;
+    animation: moveright 1s linear forwards;
+}
+.right .animate-on-scroll.visible {
+    opacity: 1;
+    animation: moveleft 1s linear forwards;
+}
 .text-box {
     padding: 20px 30px;
     background: rgb(0, 8, 20);
@@ -167,7 +179,7 @@ nav {
     border-radius: 6px;
 }
 
-.left .text-box {
+/* .left .text-box {
     animation: moveright 1s linear forwards;
     opacity: 0;
 }
@@ -175,7 +187,7 @@ nav {
 .right .text-box {
     animation: moveleft 1s linear forwards;
     opacity: 0;
-}
+} */
 
 @keyframes moveright {
     0% {
@@ -198,7 +210,7 @@ nav {
         transform: translateX(0px);
     }
 }
-
+/* 
 .experience-card:nth-child(1) .text-box{
     animation-delay: 0s;
 }
@@ -207,7 +219,7 @@ nav {
 }
 .experience-card:nth-child(3) .text-box{
     animation-delay: 2s;
-}
+} */
 
 .left {
     left: 0;

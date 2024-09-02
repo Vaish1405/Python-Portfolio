@@ -58,7 +58,7 @@
         <div class="timeline">
             <div class="experience-card left">
                 <img src="csun-job-logo.png" alt="">
-                <div class="text-box">
+                <div class="text-box animate-on-scroll" id="section-to-animate">
                     <h3>Web Developer</h3>
                     <h4>CSUN IT<small>2023 - Present</small></h4>     
                     <ul>
@@ -76,7 +76,7 @@
             </div>
             <div class="experience-card right">
                 <img src="techmetrica-job-logo.png" alt="">
-                <div class="text-box ">
+                <div class="text-box animate-on-scroll" id="section-to-animate">
                     <h3>Front-End Developer</h3>
                     <h4>Techmetrica Org.<small>2023 - 2024</small></h4>
                     <ul>
@@ -93,7 +93,7 @@
             </div>
             <div class="experience-card left">
                 <img src="csun-job-logo.png" alt="">
-                <div class="text-box ">
+                <div class="text-box animate-on-scroll" id="section-to-animate">
                     <h3>Student Supervisor</h3>
                     <h4>CSUN Library<small>2022 - 2024</small></h4>
                     <ul>
@@ -209,6 +209,29 @@
             type();
         }
         document.addEventListener('DOMContentLoaded', typeText);
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(el => {
+                if (isElementInViewport(el)) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger a scroll event to check initial state
+    handleScroll();
     </script>
 </body>
 </html>
