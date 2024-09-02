@@ -132,7 +132,7 @@ nav {
     background-color: #AA4AF2;
     margin: auto;
     height: 2px;
-    width: 10%;
+    width: 20%;
 }
 .experience {
     margin-top: 8%;
@@ -163,7 +163,7 @@ nav {
     background: rgb(0, 8, 20);
     border-bottom: 2px solid #00E3BC;
     position: relative;
-    font-size: 15px;
+    /* font-size: 15px; */
     border-radius: 6px;
 }
 
@@ -323,6 +323,72 @@ nav {
 }
 
 .projects {
+    background-color: #06071b;
+    margin: 0 auto;
+}
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
     background-color: #000814;
-    height: 800px;
+    padding: 20px;
+    margin: 5% 5%;
+    border-radius: 6px;
+    /* box-shadow: 0 2px 5px #00E3BC; */
+    border: 2px solid #00E3BC;
+    position: relative;
+}
+
+.project h3 {
+    color: #3A86FF;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin: 10px 0;
+    color: white;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.project-tech {
+    color: #FF006E;
+    font-weight: bolder;
+}
+
+.github-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 1px solid #3A86FF;
+    color: #3A86FF;
+    font-weight: bold;
+}
+
+.github-button:hover {
+    text-decoration: none;
+    background-color: #3A86FF;
+    color: white;
+}
+
+.code-icon {
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: monospace;
 }
