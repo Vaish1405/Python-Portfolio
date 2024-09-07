@@ -10,36 +10,56 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background-color: #000814;
+    height: 200px !important;
+    
+}
+@media screen and (min-width: 600px) {
+    header {
+        padding: 30px 10%;
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
 }
 
 .logo img {
+    cursor: pointer;
     height: 50px; 
 }
-
-nav {
+.navbar-toggler {
+    background-color: white !important;
+    border-radius: 10px;
+    border-color: black;
+    border: none;
+    margin: 0;
+}
+.navbar-toggler-icon {
+    width: 35px;
+    height: 35px;
+}
+.nav {
     display: flex;
     align-items: center;
-    gap: 80px;
+    margin-left: auto;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
+.nav-item {
+    display: inline-block;
+    padding: 0px 20px;
 }
 
-.nav a {
+.nav-link {
     text-decoration: none;
-    color: white;
+    color: white !important;
     font-weight: bold;
 }
 
-.nav a:hover {
-    color: #007bff;
+.nav-link:hover {
+    color: #007bff !important;
 }
 
 .contact-icons {
