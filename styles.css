@@ -435,6 +435,10 @@ header {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.contact p {
+    padding: 15px;
+}
+
 .contact-form {
     border-radius: 15px;
     margin-bottom: 30px;
