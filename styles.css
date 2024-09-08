@@ -10,8 +10,7 @@ body {
 }
 
 header {
-    height: 200px !important;
-    
+    height: 180px !important;
 }
 @media screen and (min-width: 600px) {
     header {
@@ -31,8 +30,7 @@ header {
 .navbar-toggler {
     background-color: white !important;
     border-radius: 10px;
-    border-color: black;
-    border: none;
+    outline: none !important;
     margin: 0;
 }
 .navbar-toggler-icon {
@@ -65,7 +63,7 @@ header {
 .contact-icons {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 
 .contact-icons img {
@@ -151,8 +149,8 @@ header {
     width: 20%;
 }
 .experience {
-    margin-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 100px;
+    padding-bottom: 100px;
     background-color: #06071b;
 }
 
@@ -344,6 +342,7 @@ header {
 
 .projects {
     background-color: #06071b;
+    padding-bottom: 100px;
     margin: 0 auto;
 }
 .projects-container {
@@ -429,4 +428,73 @@ header {
     margin-right: 5px;
     font-weight: bold;
     font-family: monospace;
+}
+
+.contact {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form {
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    color: #3A86FF;
+    margin-top: 15px;
+    display: block;
+    font-weight: bold;
+}
+.contact-form textarea,
+.contact-form .input {
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    background-color: #06071b;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(219, 219, 219, 0.3);
+}
+.contact-form .input::placeholder {
+    color: rgb(219, 219, 219, 0.5) !important;
+}
+.contact-form textarea:focus,
+.contact-form .input:focus {
+    border-bottom: 1px solid #00E3BC;
+    outline: none;
+}
+
+.contact-form .btn {
+    background-color: #06071b;
+    text-decoration: none;
+    margin-top: 35px !important;
+    padding: 10px 30px;
+    border-radius: 0px;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 1px solid #3A86FF;
+    color: #3A86FF;
+    font-weight: bold;
+}
+
+.contact-form .btn:hover {
+    text-decoration: none;
+    background-color: #3A86FF;
+    color: white;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 50px;
+    background-color: black;
+    color: #aaa;
+    text-align: center;
+    font-size: 14px;
+}
+footer p {
+    margin: 0;
+}
+.container.form{
+    padding-bottom: 20px;
 }
