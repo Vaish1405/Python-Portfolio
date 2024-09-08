@@ -229,6 +229,11 @@
         emailjs.init('V8uSqV-yYv40ofTS0')
     </script>
     <script>
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                window.location.replace('/');
+            }
+        });
         const btn = document.getElementById('button');
 
         document.getElementById('form')
@@ -239,7 +244,7 @@
 
         const serviceID = 'default_service';
         const templateID = 'template_fvpt179';
-        
+
         emailjs.sendForm('service_cqm7cam', 'template_fvpt179', this)
             .then(() => {
                 btn.value = 'Send Email';
@@ -249,8 +254,6 @@
                 alert(JSON.stringify(err));
             });
         });
-    </script>
-    <script>
         const texts = ["UI/UX Designer", "Web Developer", "Software Developer", "Python Developer",
                     "Java Developer", "JavaScript Developer"
                     ]; 

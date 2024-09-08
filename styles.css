@@ -51,6 +51,8 @@ header {
 }
 
 .nav-link {
+    background: none;
+    border: none;
     text-decoration: none;
     color: white !important;
     font-weight: bold;
