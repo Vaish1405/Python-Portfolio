@@ -248,10 +248,10 @@
 
         emailjs.sendForm('service_cqm7cam', 'template_fvpt179', this)
             .then(() => {
-                btn.value = 'Send Email';
+                btn.value = 'Send';
                 alert('Sent!');
             }, (err) => {
-                btn.value = 'Send Email';
+                btn.value = 'Send';
                 alert(JSON.stringify(err));
             });
         });
